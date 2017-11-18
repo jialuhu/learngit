@@ -245,7 +245,7 @@ int main()
 {
     Btree *p;
     p = (Btree *)malloc(sizeof(Tree));
-    crea(p);//创建二叉树
+    crea(p);
     printf("\n先序遍历:\n");
     undigui_front(*p);
     digui_front(*p);
