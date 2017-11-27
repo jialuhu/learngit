@@ -31,7 +31,7 @@ Huff *cretahuffman(int n) //传入叶子节点的个数
     int i = 0;
     int m = 2*n-1;//计算总节点个数
     Huff *HF;
-    HF = (Huff *)malloc(sizeof(Huff));
+    HF = (Huff *)malloc(n*sizeof(Huff));
     /*初始化哈夫曼树的叶子节点*/
     for(i=0; i<n; i++)
     {
@@ -51,6 +51,7 @@ Huff *cretahuffman(int n) //传入叶子节点的个数
         HF[j].Rchirld = -1;
         HF[j].weight = -1;
     }
+    free(HF);
     return HF;
 }
 
